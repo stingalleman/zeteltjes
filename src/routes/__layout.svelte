@@ -1,49 +1,178 @@
 <script lang="ts">
-	import '../app.css';
+  import '../app.css';
+  import { fly, slide, fade } from 'svelte/transition';
 
-	function darkMode() {}
+  let mobileMenuStatus = false;
+  function openMobileMenu() {
+    if (!mobileMenuStatus) {
+      mobileMenuStatus = true;
+    } else {
+      mobileMenuStatus = false;
+    }
+  }
 </script>
 
-<header class="text-gray-600 body-font">
-	<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-		<a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-			<!-- logo -->
-			<span class="ml-3 text-xl">Tailblocks</span>
-		</a>
-		<nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-			<a class="mr-5 hover:text-gray-900">First Link</a>
-			<a class="mr-5 hover:text-gray-900">Second Link</a>
-			<a class="mr-5 hover:text-gray-900">Third Link</a>
-			<a class="mr-5 hover:text-gray-900">Fourth Link</a>
-		</nav>
-		<div
-			class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in"
-		>
-			<input
-				type="checkbox"
-				name="toggle"
-				id="toggle"
-				class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
-				on:click={darkMode}
-			/>
-			<label
-				for="toggle"
-				class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
-			/>
-		</div>
-	</div>
-</header>
+<!-- This example requires Tailwind CSS v2.0+ -->
+<nav class="bg-white dark:bg-gray-800">
+  <div class=" px-2 sm:px-6 lg:px-8">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button
+          type="button"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          on:click={openMobileMenu}
+        >
+          <span class="sr-only">Open main menu</span>
+          <!--
+            Icon when menu is closed.
 
-<slot />
+            Heroicon name: outline/menu
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          {#if !mobileMenuStatus}
+            <svg
+              class="block h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          {:else}
+            <!--
+            Icon when menu is open.
+
+            Heroicon name: outline/x
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+            <svg
+              class="h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          {/if}
+        </button>
+      </div>
+      <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex-shrink-0 flex items-center">
+          <img
+            class="block lg:hidden h-8 w-auto"
+            src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+            alt="Workflow"
+          />
+          <img
+            class="hidden lg:block h-8 w-auto"
+            src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+            alt="Workflow"
+          />
+        </div>
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-4">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a
+              href="zetelverdeler"
+              class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+              aria-current="page">Zetelverdeler</a
+            >
+
+            <a
+              href="moties"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >Moties</a
+            >
+
+            <a
+              href="wetvoorstellen"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >Wetvoorstellen</a
+            >
+
+            <a
+              href="stemmingen"
+              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >Stemmingen</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  {#if mobileMenuStatus}
+    <div
+      in:slide={{ duration: 450 }}
+      out:slide={{ duration: 450 }}
+      class="sm:hidden"
+      id="mobile-menu"
+    >
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a
+          href="zetelverdeler"
+          class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+          aria-current="page">Zetelverdeler</a
+        >
+
+        <a
+          href="moties"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          >Moties</a
+        >
+
+        <a
+          href="wetvoorstellen"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          >Wetvoorstellen</a
+        >
+
+        <a
+          href="stemmingen"
+          class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+          >Stemmingen</a
+        >
+      </div>
+    </div>
+  {/if}
+</nav>
+
+<body class="bg-white dark:bg-gray-800">
+  <div id="wrapper">
+    <slot />
+  </div>
+</body>
 
 <style lang="postcss">
-	.toggle-checkbox:checked {
-		@apply right-0 border-green-400;
-		right: 0;
-		border-color: #68d391;
-	}
-	.toggle-checkbox:checked + .toggle-label {
-		@apply bg-green-400;
-		background-color: #68d391;
-	}
+  body {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+  }
+  #wrapper {
+    width: 98%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 </style>
