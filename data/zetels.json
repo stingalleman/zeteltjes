@@ -1,0 +1,94 @@
+[
+  {
+    "fractie": "VVD",
+    "zetels": 34,
+    "color": "FF6400"
+  },
+  {
+    "fractie": "D66",
+    "zetels": 24,
+    "color": "00B734"
+  },
+  {
+    "fractie": "PVV",
+    "zetels": 17,
+    "color": "1e213d",
+    "comment": "kleur van NL vlag"
+  },
+  {
+    "fractie": "CDA",
+    "zetels": 14,
+    "color": "2CC84D"
+  },
+  {
+    "fractie": "SP",
+    "zetels": 9,
+    "color": "FF0000",
+    "comment": "geen huisstijl"
+  },
+  {
+    "fractie": "PvdA",
+    "zetels": 9,
+    "color": "DF111A"
+  },
+  {
+    "fractie": "GL",
+    "zetels": 8,
+    "color": "39A935"
+  },
+  {
+    "fractie": "CU",
+    "zetels": 5,
+    "color": "072e65"
+  },
+  {
+    "fractie": "FVD",
+    "zetels": 5,
+    "color": "B20000"
+  },
+  {
+    "fractie": "SGP",
+    "zetels": 3,
+    "color": "F95200"
+  },
+  {
+    "fractie": "DENK",
+    "zetels": 3,
+    "color": "00BBB5"
+  },
+  {
+    "fractie": "Volt",
+    "zetels": 3,
+    "color": "502379"
+  },
+  {
+    "fractie": "JA21",
+    "zetels": 3,
+    "color": "26265A"
+  },
+  {
+    "fractie": "Van Haga",
+    "zetels": 3,
+    "color": "009DD4"
+  },
+  {
+    "fractie": "Omtzigt",
+    "zetels": 1,
+    "color": "010D40"
+  },
+  {
+    "fractie": "Den Haan",
+    "zetels": 1,
+    "color": "543586"
+  },
+  {
+    "fractie": "BIJ1",
+    "zetels": 1,
+    "color": "FBFF00"
+  },
+  {
+    "fractie": "BBB",
+    "zetels": 1,
+    "color": "84C900"
+  }
+]
