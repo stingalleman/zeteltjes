@@ -3,95 +3,112 @@
     {
       "fractie": "VVD",
       "zetels": 34,
-      "color": "FF6400"
+      "color": "FF6400",
+      "coalitie": true
     },
     {
       "fractie": "D66",
       "zetels": 24,
-      "color": "00B734"
+      "color": "00B734",
+      "coalitie": true
     },
     {
       "fractie": "PVV",
       "zetels": 17,
       "color": "1e213d",
-      "comment": "kleur van NL vlag"
+      "comment": "kleur van NL vlag",
+      "coalitie": false
     },
     {
       "fractie": "CDA",
       "zetels": 14,
-      "color": "2CC84D"
+      "color": "2CC84D",
+      "coalitie": true
     },
     {
       "fractie": "SP",
       "zetels": 9,
       "color": "FF0000",
-      "comment": "geen huisstijl"
+      "comment": "geen huisstijl",
+      "coalitie": false
     },
     {
       "fractie": "PvdA",
       "zetels": 9,
-      "color": "DF111A"
+      "color": "DF111A",
+      "coalitie": false
     },
     {
       "fractie": "GL",
       "zetels": 8,
-      "color": "39A935"
+      "color": "39A935",
+      "coalitie": false
     },
     {
       "fractie": "CU",
       "zetels": 5,
-      "color": "072e65"
+      "color": "072e65",
+      "coalitie": true
     },
     {
       "fractie": "FVD",
       "zetels": 5,
-      "color": "B20000"
+      "color": "B20000",
+      "coalitie": false
     },
     {
       "fractie": "SGP",
       "zetels": 3,
-      "color": "F95200"
+      "color": "F95200",
+      "coalitie": false
     },
     {
       "fractie": "DENK",
       "zetels": 3,
-      "color": "00BBB5"
+      "color": "00BBB5",
+      "coalitie": false
     },
     {
       "fractie": "Volt",
       "zetels": 3,
-      "color": "502379"
+      "color": "502379",
+      "coalitie": false
     },
     {
       "fractie": "JA21",
       "zetels": 3,
-      "color": "26265A"
+      "color": "26265A",
+      "coalitie": false
     },
     {
       "fractie": "Van Haga",
       "zetels": 3,
-      "color": "009DD4"
+      "color": "009DD4",
+      "coalitie": false
     },
     {
       "fractie": "Omtzigt",
       "zetels": 1,
-      "color": "010D40"
+      "color": "010D40",
+      "coalitie": false
     },
     {
       "fractie": "Den Haan",
       "zetels": 1,
-      "color": "543586"
+      "color": "543586",
+      "coalitie": false
     },
     {
       "fractie": "BIJ1",
       "zetels": 1,
-      "color": "FBFF00"
+      "color": "FBFF00",
+      "coalitie": false
     },
     {
       "fractie": "BBB",
       "zetels": 1,
-      "color": "84C900"
+      "color": "84C900",
+      "coalitie": false
     }
-  ],
-  "coalitie": ["VVD", "D66", "CDA", "CU"]
+  ]
 }
