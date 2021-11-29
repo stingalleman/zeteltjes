@@ -26,6 +26,12 @@
       "coalitie": true
     },
     {
+      "fractie": "PvdA",
+      "zetels": 9,
+      "color": "DF111A",
+      "coalitie": false
+    },
+    {
       "fractie": "SP",
       "zetels": 9,
       "color": "FF0000",
@@ -33,15 +39,15 @@
       "coalitie": false
     },
     {
-      "fractie": "PvdA",
-      "zetels": 9,
-      "color": "DF111A",
-      "coalitie": false
-    },
-    {
       "fractie": "GL",
       "zetels": 8,
       "color": "39A935",
+      "coalitie": false
+    },
+    {
+      "fractie": "PvdD",
+      "zetels": 6,
+      "color": "17864A",
       "coalitie": false
     },
     {
@@ -57,27 +63,9 @@
       "coalitie": false
     },
     {
-      "fractie": "SGP",
-      "zetels": 3,
-      "color": "F95200",
-      "coalitie": false
-    },
-    {
       "fractie": "DENK",
       "zetels": 3,
       "color": "00BBB5",
-      "coalitie": false
-    },
-    {
-      "fractie": "Volt",
-      "zetels": 3,
-      "color": "502379",
-      "coalitie": false
-    },
-    {
-      "fractie": "JA21",
-      "zetels": 3,
-      "color": "26265A",
       "coalitie": false
     },
     {
@@ -87,15 +75,27 @@
       "coalitie": false
     },
     {
-      "fractie": "Omtzigt",
-      "zetels": 1,
-      "color": "010D40",
+      "fractie": "JA21",
+      "zetels": 3,
+      "color": "26265A",
       "coalitie": false
     },
     {
-      "fractie": "Den Haan",
+      "fractie": "SGP",
+      "zetels": 3,
+      "color": "F95200",
+      "coalitie": false
+    },
+    {
+      "fractie": "Volt",
+      "zetels": 3,
+      "color": "502379",
+      "coalitie": false
+    },
+    {
+      "fractie": "BBB",
       "zetels": 1,
-      "color": "543586",
+      "color": "84C900",
       "coalitie": false
     },
     {
@@ -105,9 +105,15 @@
       "coalitie": false
     },
     {
-      "fractie": "BBB",
+      "fractie": "Den Haan",
       "zetels": 1,
-      "color": "84C900",
+      "color": "543586",
+      "coalitie": false
+    },
+    {
+      "fractie": "Omtzigt",
+      "zetels": 1,
+      "color": "010D40",
       "coalitie": false
     }
   ]

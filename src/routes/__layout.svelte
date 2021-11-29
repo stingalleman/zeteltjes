@@ -158,9 +158,7 @@
 </nav>
 
 <body class="bg-white dark:bg-gray-800">
-  <div id="wrapper">
-    <slot />
-  </div>
+  <slot />
 </body>
 
 <style lang="postcss">
@@ -169,10 +167,5 @@
     max-width: 100%;
     height: 100%;
     max-height: 100%;
-  }
-  #wrapper {
-    width: 98%;
-    max-width: 100%;
-    margin: 0 auto;
   }
 </style>
