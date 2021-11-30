@@ -1,118 +1,99 @@
 {
-  "zetels": [
-    {
-      "fractie": "VVD",
+  "zetels": {
+    "VVD": {
       "zetels": 34,
       "color": "FF6400",
       "coalitie": true
     },
-    {
-      "fractie": "D66",
+    "D66": {
       "zetels": 24,
       "color": "00B734",
       "coalitie": true
     },
-    {
-      "fractie": "PVV",
+    "PVV": {
       "zetels": 17,
       "color": "1e213d",
       "coalitie": false
     },
-    {
-      "fractie": "CDA",
+    "CDA": {
       "zetels": 14,
       "color": "2CC84D",
       "coalitie": true
     },
-    {
-      "fractie": "PvdA",
+    "PvdA": {
       "zetels": 9,
       "color": "DF111A",
       "coalitie": false
     },
-    {
-      "fractie": "SP",
+    "SP": {
       "zetels": 9,
       "color": "FF0000",
       "coalitie": false
     },
-    {
-      "fractie": "GL",
+    "GL": {
       "zetels": 8,
       "color": "39A935",
       "coalitie": false
     },
-    {
-      "fractie": "PvdD",
+    "PvdD": {
       "zetels": 6,
       "color": "17864A",
       "coalitie": false
     },
-    {
-      "fractie": "CU",
+    "CU": {
       "zetels": 5,
       "color": "072e65",
       "coalitie": true
     },
-    {
-      "fractie": "FVD",
+    "FVD": {
       "zetels": 5,
       "color": "B20000",
       "coalitie": false
     },
-    {
-      "fractie": "DENK",
+    "DENK": {
       "zetels": 3,
       "color": "00BBB5",
       "coalitie": false
     },
-    {
-      "fractie": "Van Haga",
+    "Van Haga": {
       "zetels": 3,
       "color": "009DD4",
       "coalitie": false
     },
-    {
-      "fractie": "JA21",
+    "JA21": {
       "zetels": 3,
       "color": "26265A",
       "coalitie": false
     },
-    {
-      "fractie": "SGP",
+    "SGP": {
       "zetels": 3,
       "color": "F95200",
       "coalitie": false
     },
-    {
-      "fractie": "Volt",
+    "Volt": {
       "zetels": 3,
       "color": "502379",
       "coalitie": false
     },
-    {
-      "fractie": "BBB",
+    "BBB": {
       "zetels": 1,
       "color": "84C900",
       "coalitie": false
     },
-    {
-      "fractie": "BIJ1",
+    "BIJ1": {
       "zetels": 1,
       "color": "FBFF00",
       "coalitie": false
     },
-    {
-      "fractie": "Den Haan",
+    "Den Haan": {
       "zetels": 1,
       "color": "543586",
       "coalitie": false
     },
-    {
-      "fractie": "Omtzigt",
+    "Omtzigt": {
       "zetels": 1,
       "color": "010D40",
       "coalitie": false
     }
-  ]
+  }
 }

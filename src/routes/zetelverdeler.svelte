@@ -5,18 +5,21 @@
   import CrossCircle from '../components/Icons/CrossCircle.svelte';
   import CheckCircle from '../components/Icons/CheckCircle.svelte';
 
+  const fracties = Object.keys(zetels);
+
   let stemCounter = 0;
   let minVotes = 75;
   $: fractiesVoor = [];
 
   let coalitiePartijen = [];
   let coalitieStemmen = 0;
-  for (const fracties of zetels) {
-    if (fracties.coalitie) {
-      coalitiePartijen.push(fracties.fractie);
-      coalitieStemmen += fracties.zetels;
+
+  fracties.forEach((f) => {
+    if (zetels[f].coalitie) {
+      coalitiePartijen.push(f);
+      coalitieStemmen += zetels[f].zetels;
     }
-  }
+  });
 
   function toggleFractie(fractie, zetels) {
     if (fractiesVoor.includes(fractie)) {
@@ -34,7 +37,23 @@
   function toggleAllCoalitie() {
     // check if all coalitie partijen are voor
     if (coalitiePartijen.every((v) => fractiesVoor.includes(v))) {
+      // remove all coalitie partijen
+      coalitiePartijen.forEach((v) => {
+        const index = fractiesVoor.indexOf(v);
+        fractiesVoor.splice(index, 1);
+      });
+      stemCounter -= coalitieStemmen;
+    } else {
+      // add all coalitie partijen
+      coalitiePartijen.forEach((v) => {
+        if (!fractiesVoor.includes(v)) {
+          fractiesVoor.push(v);
+          stemCounter += zetels[v].zetels;
+        }
+      });
     }
+
+    fractiesVoor = fractiesVoor;
   }
 
   function toggleMeerderheidMode() {
@@ -114,15 +133,7 @@
         </div>
       </button>
     {:else}
-      <button
-        on:click={() => {
-          for (const fractie of zetels) {
-            if (fractie.coalitie) {
-              toggleFractie(fractie.fractie, fractie.zetels);
-            }
-          }
-        }}
-      >
+      <button on:click={toggleAllCoalitie}>
         <div class="bg-white flex h-16 m-auto justify-center items-center rounded-xl">
           <p class="text-xl font-medium text-black">Alle coalitie partijen</p>
           <br />
@@ -131,38 +142,38 @@
       </button>
     {/if}
 
-    {#each zetels as { color, fractie, zetels, coalitie }}
+    {#each fracties as fractie}
       {#if fractiesVoor.includes(fractie)}
         <button
           on:click={() => {
-            toggleFractie(fractie, zetels);
+            toggleFractie(fractie, zetels[fractie].zetels);
           }}
         >
           <div
             class="bg-white flex h-16 m-auto justify-center items-center rounded-xl border-green-500 border-4"
           >
-            <p style="color: #{color}" class="text-xl font-medium text-black">
+            <p style="color: #{zetels[fractie].color}" class="text-xl font-medium text-black">
               {fractie}
             </p>
             <br />
             <p class="text-sm text-gray-500">
-              ({zetels})
+              ({zetels[fractie].zetels})
             </p>
           </div>
         </button>
       {:else}
         <button
           on:click={() => {
-            toggleFractie(fractie, zetels);
+            toggleFractie(fractie, zetels[fractie].zetels);
           }}
         >
           <div class="bg-white flex h-16 m-auto justify-center items-center rounded-xl">
-            <p style="color: #{color}" class="text-xl font-medium text-black">
+            <p style="color: #{zetels[fractie].color}" class="text-xl font-medium text-black">
               {fractie}
             </p>
             <br />
             <p class="text-sm text-gray-500">
-              ({zetels})
+              ({zetels[fractie].zetels})
             </p>
           </div>
         </button>
